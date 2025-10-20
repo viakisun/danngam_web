@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Button from "@/components/Button";
 import Section from "@/components/Section";
+import AnimatedSection from "@/components/AnimatedSection";
+import Counter from "@/components/Counter";
 import {
   Phone,
   Clock,
@@ -11,6 +13,9 @@ import {
   CheckCircle,
   ArrowRight,
   Sparkles,
+  TrendingUp,
+  Award,
+  Globe,
 } from "lucide-react";
 
 export default function Home() {
@@ -37,7 +42,7 @@ export default function Home() {
             <h1 className="text-5xl md:text-7xl font-bold text-text mb-6 leading-tight">
               농업 일손,
               <br />
-              <span className="gradient-text">이제 간단하게</span> 연결하세요
+              <span className="gradient-animated">이제 간단하게</span> 연결하세요
             </h1>
 
             <p className="text-xl md:text-2xl text-text-light mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -46,7 +51,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <Button size="xl" className="group">
+              <Button size="xl" className="group pulse-animation">
                 App Store에서 다운로드
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Button>
@@ -132,6 +137,59 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Statistics Section */}
+      <Section background="gray" title="단감의 성과" subtitle="농업 공동체가 함께 만들어가는 성과를 확인해보세요" centered>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          <AnimatedSection animation="scale-in" delay={0}>
+            <div className="card card-3d text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-3xl font-bold text-text mb-2">
+                <Counter end={1247} suffix="+" />
+              </h3>
+              <p className="text-text-light">등록된 사용자</p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="scale-in" delay={100}>
+            <div className="card card-3d text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-3xl font-bold text-text mb-2">
+                <Counter end={3891} suffix="+" />
+              </h3>
+              <p className="text-text-light">성공 매칭</p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="scale-in" delay={200}>
+            <div className="card card-3d text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Award className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-3xl font-bold text-text mb-2">
+                <Counter end={95} suffix="%" />
+              </h3>
+              <p className="text-text-light">만족도</p>
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection animation="scale-in" delay={300}>
+            <div className="card card-3d text-center">
+              <div className="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <Globe className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-3xl font-bold text-text mb-2">
+                <Counter end={42} />
+              </h3>
+              <p className="text-text-light">전국 지역</p>
+            </div>
+          </AnimatedSection>
+        </div>
+      </Section>
+
       {/* Solution Section */}
       <Section
         background="gradient"
@@ -166,15 +224,17 @@ export default function Home() {
               color: "secondary",
             },
           ].map((item, idx) => (
-            <div key={idx} className="card card-hover text-center">
-              <div
-                className={`w-16 h-16 bg-gradient-${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}
-              >
-                <item.icon className="w-8 h-8 text-white" />
+            <AnimatedSection key={idx} animation="slide-up" delay={idx * 100}>
+              <div className="card card-3d text-center">
+                <div
+                  className={`w-16 h-16 ${item.color === 'primary' ? 'bg-primary-500' : 'bg-secondary-500'} rounded-2xl flex items-center justify-center mx-auto mb-6`}
+                >
+                  <item.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-text mb-3">{item.title}</h3>
+                <p className="text-text-light">{item.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-text mb-3">{item.title}</h3>
-              <p className="text-text-light">{item.description}</p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </Section>
