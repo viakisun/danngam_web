@@ -1,11 +1,12 @@
 import Section from "@/components/Section";
 import {
   Target,
-  Users,
+  Wrench,
   Shield,
-  Sparkles,
-  Heart,
+  Database,
+  Award,
   TrendingUp,
+  BarChart3,
 } from "lucide-react";
 
 export default function AboutPage() {
@@ -15,17 +16,16 @@ export default function AboutPage() {
       <section className="bg-gradient-to-br from-primary-50 to-background pt-16 pb-12">
         <div className="container-custom text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full mb-6 shadow-soft">
-            <Heart className="w-4 h-4 text-secondary-500" />
+            <Wrench className="w-4 h-4 text-secondary-500" />
             <span className="text-sm font-medium text-text">
-              농업 공동체를 위한 플랫폼
+              농기계 산업을 위한 플랫폼
             </span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold text-text mb-6">
             단감은 <span className="gradient-text">어떤 플랫폼</span>인가요?
           </h1>
           <p className="text-xl text-text-light max-w-3xl mx-auto">
-            농업의 미래를 위한 가장 간단하고 안전한 인력 매칭 서비스를
-            제공합니다
+            농기계 전문가와 농가를 투명하게 연결하고, 데이터 기반 신뢰를 구축하는 스마트 농업 플랫폼입니다
           </p>
         </div>
       </section>
@@ -37,17 +37,20 @@ export default function AboutPage() {
           <p className="text-xl text-text-light leading-relaxed text-center">
             단감은{" "}
             <span className="font-semibold text-text">
-              농촌의 고질적인 일손 부족 문제
+              농기계 작업의 투명성과 신뢰 문제
             </span>
-            를 해결하고, 계절 농업 노동자들이{" "}
-            <span className="font-semibold text-text">안정적으로 일자리</span>를
-            찾을 수 있도록 돕는 정보 중개 플랫폼입니다. 우리는 복잡한 절차와
-            높은 수수료 없이, 농부와 작업자가 서로를 신뢰하고 직접 소통할 수
-            있는{" "}
+            를 해결하고, 전문 장비를 보유한 운용자들이{" "}
+            <span className="font-semibold text-text">안정적으로 작업을 수주</span>하고
+            전문성을 입증할 수 있도록 돕는 데이터 플랫폼입니다. 우리는{" "}
             <span className="font-semibold text-text">
-              가장 간단하고 안전한 방법
+              장비 정보의 완전한 공개
             </span>
-            을 제공하여 농업 생태계의 지속 가능한 발전에 기여하고자 합니다.
+            와{" "}
+            <span className="font-semibold text-text">
+              작업 이력의 자동 기록
+            </span>
+            을 통해, 농가·운용자·제조사·지원기관 모두에게 신뢰할 수 있는 데이터를 제공하여
+            농기계 산업의 디지털 전환을 선도합니다.
           </p>
         </div>
       </Section>
@@ -57,24 +60,23 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="card">
             <div className="w-14 h-14 bg-primary-500 rounded-2xl flex items-center justify-center mb-6">
-              <Users className="w-7 h-7 text-white" />
+              <Shield className="w-7 h-7 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-text mb-4">농부의 인력난</h3>
+            <h3 className="text-2xl font-bold text-text mb-4">농가의 전문가 확보 어려움</h3>
             <ul className="space-y-3 text-text-light">
               <li className="flex items-start gap-3">
                 <span className="text-primary-500 font-bold mt-1">•</span>
                 <span>
-                  적시에 필요한 인력을 구하기 어렵고, 기존 중개 방식은 비용
-                  부담이 큼
+                  전문 농기계 작업이 필요한 시기에, 적절한 장비를 보유한 숙련된 운용자를 찾기가 쉽지 않음
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-500 font-bold mt-1">•</span>
-                <span>개인정보 유출 우려와 스팸 전화로 인한 피로감</span>
+                <span>운용자가 보유한 장비의 종류, 상태, 스펙을 사전에 확인할 방법이 없어 작업 품질을 예측하기 어려움</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-primary-500 font-bold mt-1">•</span>
-                <span>신뢰할 수 있는 작업자를 찾기 어려움</span>
+                <span>운용자의 실제 작업 경험과 평판을 객관적으로 검증할 수 있는 체계 부재</span>
               </li>
             </ul>
           </div>
@@ -84,23 +86,22 @@ export default function AboutPage() {
               <TrendingUp className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-text mb-4">
-              작업자의 일자리 불안정
+              운용자의 전문성 입증 어려움
             </h3>
             <ul className="space-y-3 text-text-light">
               <li className="flex items-start gap-3">
                 <span className="text-secondary-500 font-bold mt-1">•</span>
                 <span>
-                  계절에 따라 일자리를 찾아 이동해야 하는 작업자들은 안정적인
-                  정보 확보에 어려움
+                  고가의 전문 장비를 보유하고 숙련된 기술이 있어도, 이를 잠재 고객에게 효과적으로 알릴 채널이 없음
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-secondary-500 font-bold mt-1">•</span>
-                <span>높은 중개 수수료로 실질 소득 감소</span>
+                <span>오랜 기간 쌓아온 작업 경험과 평판을 체계적으로 기록하고 증명할 수단 부족</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-secondary-500 font-bold mt-1">•</span>
-                <span>먼 거리 이동으로 인한 시간과 비용 부담</span>
+                <span>인근 지역을 넘어 더 넓은 범위에서 작업 기회를 발굴하기 어려움</span>
               </li>
             </ul>
           </div>
@@ -111,32 +112,34 @@ export default function AboutPage() {
       <Section
         background="white"
         title="단감의 솔루션"
-        subtitle="농부와 작업자 간의 직접적인 연결을 통해 이러한 문제들을 해결합니다"
+        subtitle="투명한 장비 정보와 데이터 기반 신뢰로 농기계 산업의 문제를 해결합니다"
         centered
       >
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
             {
-              icon: "⚡",
-              title: "간단한 정보 교환",
+              icon: Wrench,
+              title: "장비 정보 완전 공개",
               description:
-                "농부는 3분 내에 작업을 등록하고, 작업자는 위치 기반으로 실시간 작업 정보를 확인합니다",
+                "운용자는 보유한 농기계의 제조사, 모델, 연식을 등록하고, 농가는 필요한 전문 장비를 정확히 찾을 수 있습니다",
             },
             {
-              icon: "🔒",
-              title: "안전한 연락처 교환",
+              icon: Award,
+              title: "평판 시스템 운영",
               description:
-                "양측의 명시적인 동의 하에만 전화번호가 교환되어 개인정보를 보호하고 안전한 소통을 가능하게 합니다",
+                "모든 작업은 자동으로 이력에 기록되며, 상호 평가를 통해 신뢰할 수 있는 평판이 누적됩니다",
             },
             {
-              icon: "💝",
-              title: "완전 무료 서비스",
+              icon: Database,
+              title: "데이터 기반 생태계",
               description:
-                "중개 수수료 없이 모든 서비스를 무료로 제공하여 농부와 작업자 모두에게 경제적 부담을 덜어줍니다",
+                "제조사·지원기관·연구소까지 활용 가능한 신뢰성 높은 농기계 작업 데이터를 구축합니다",
             },
           ].map((item, idx) => (
             <div key={idx} className="card card-hover text-center">
-              <div className="text-5xl mb-4">{item.icon}</div>
+              <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-secondary-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <item.icon className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-xl font-bold text-text mb-3">{item.title}</h3>
               <p className="text-text-light">{item.description}</p>
             </div>
@@ -149,35 +152,35 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {[
             {
-              icon: Sparkles,
-              title: "간단함",
-              subtitle: "Simplicity",
-              description:
-                "누구나 쉽게 사용할 수 있도록 가장 직관적이고 간단한 사용자 경험을 제공합니다",
-              color: "primary",
-            },
-            {
               icon: Shield,
-              title: "안전",
-              subtitle: "Safety",
-              description:
-                "개인정보 보호와 신뢰할 수 있는 정보 교환을 최우선으로 합니다",
-              color: "secondary",
-            },
-            {
-              icon: Target,
               title: "투명성",
               subtitle: "Transparency",
               description:
-                "모든 정보는 명확하게 공개되며, 숨겨진 수수료나 불이익이 없습니다",
+                "모든 장비 정보와 작업 이력은 투명하게 공개되며, 누구나 검증 가능한 데이터를 확인할 수 있습니다",
               color: "primary",
             },
             {
-              icon: Heart,
-              title: "상생",
-              subtitle: "Co-prosperity",
+              icon: Database,
+              title: "데이터 신뢰성",
+              subtitle: "Data Integrity",
               description:
-                "농부와 작업자 모두에게 이익이 되는 지속 가능한 생태계를 구축합니다",
+                "자동 기록된 작업 데이터는 조작이 불가능하며, 산업 전체가 신뢰할 수 있는 정보를 제공합니다",
+              color: "secondary",
+            },
+            {
+              icon: Award,
+              title: "전문성 인정",
+              subtitle: "Recognition",
+              description:
+                "고가 장비 보유와 숙련된 경험을 체계적으로 관리하고, 정당한 평가를 받을 수 있도록 지원합니다",
+              color: "primary",
+            },
+            {
+              icon: BarChart3,
+              title: "생태계 발전",
+              subtitle: "Ecosystem Growth",
+              description:
+                "농가·운용자·제조사·지원기관이 함께 성장하는 선순환 구조를 구축합니다",
               color: "secondary",
             },
           ].map((value, idx) => (
@@ -206,18 +209,18 @@ export default function AboutPage() {
             {[
               {
                 phase: "Phase 1",
-                title: "현재",
-                description: "MVP 출시, 핵심 가치 검증",
+                title: "데이터 플랫폼 구축",
+                description: "농기계 작업의 투명한 정보 공개와 평판 시스템 확립",
               },
               {
                 phase: "Phase 2",
-                title: "단기",
-                description: "사용자 피드백 기반 개선",
+                title: "생태계 확장",
+                description: "제조사·지원기관과의 데이터 연계로 산업 전반의 효율성 향상",
               },
               {
                 phase: "Phase 3",
-                title: "장기",
-                description: "농업 공동체의 필수 플랫폼",
+                title: "스마트농업 인프라",
+                description: "농기계 산업의 디지털 전환을 선도하는 필수 인프라로 성장",
               },
             ].map((item, idx) => (
               <div

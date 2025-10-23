@@ -19,12 +19,12 @@ export default function Navigation() {
   }, []);
 
   const menuItems = [
-    { href: "/about", label: "소개" },
-    { href: "/how-it-works", label: "작동방식" },
-    { href: "/for-farmers", label: "농부" },
-    { href: "/for-workers", label: "작업자" },
+    { href: "/about", label: "플랫폼 소개" },
+    { href: "/how-it-works", label: "작동 방식" },
+    { href: "/for-farmers", label: "농가" },
+    { href: "/for-operators", label: "운용자" },
+    { href: "/for-institutions", label: "지원기관" },
     { href: "/features", label: "기능" },
-    { href: "/safety", label: "안전" },
     { href: "/faq", label: "FAQ" },
     { href: "/contact", label: "문의" },
   ];

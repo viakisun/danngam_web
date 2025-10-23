@@ -14,11 +14,11 @@ export default function Footer() {
               <h3 className="text-2xl font-bold">단감</h3>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              농부와 작업자를 직접 이어주는
+              농기계 전문가와 농가를 연결하는
               <br />
-              가장 간단하고 안전한
+              스마트 농업 플랫폼
               <br />
-              무료 매칭 플랫폼
+              데이터 기반 신뢰 서비스
             </p>
           </div>
 
@@ -62,15 +62,23 @@ export default function Footer() {
                   href="/for-farmers"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  농부를 위한 단감
+                  농가를 위한 단감
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/for-workers"
+                  href="/for-operators"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  작업자를 위한 단감
+                  운용자를 위한 단감
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/for-institutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  지원기관을 위한 단감
                 </Link>
               </li>
             </ul>

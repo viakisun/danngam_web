@@ -8,6 +8,13 @@ import {
   Phone,
   Sparkles,
   ArrowRight,
+  Award,
+  MapPin,
+  TrendingUp,
+  BarChart3,
+  MessageCircle,
+  FileCheck,
+  Bell,
 } from "lucide-react";
 
 export default function ForFarmersPage() {
@@ -18,11 +25,12 @@ export default function ForFarmersPage() {
         <div className="container-custom text-center">
           <Users className="w-16 h-16 text-primary-500 mx-auto mb-6" />
           <h1 className="text-5xl md:text-6xl font-bold text-text mb-6">
-            농부님, <span className="gradient-text">일손 걱정</span> 이제
-            그만하세요
+            필요한 <span className="gradient-text">농기계 작업</span>,
+            <br />
+            전문가에게 맡기세요
           </h1>
           <p className="text-xl text-text-light max-w-3xl mx-auto mb-8">
-            3분 만에 작업 등록, 관심있는 작업자만 선택하세요
+            장비 정보와 평판을 확인하고, 신뢰할 수 있는 운용자를 선택하세요
           </p>
           <Button size="xl" className="group">
             지금 시작하기
@@ -34,36 +42,36 @@ export default function ForFarmersPage() {
       {/* Pain Points */}
       <Section
         background="white"
-        title="농부님들이 겪는 어려움"
+        title="농가가 겪는 어려움"
         subtitle="단감이 이해하고 해결합니다"
         centered
       >
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {[
             {
-              title: "일손 구하기 어려움",
-              problem: "수확 시즌마다 인력 부족, 지역 게시판으로는 한계",
-              solution: "위치 기반으로 근처 작업자들에게 자동 노출",
+              title: "전문 농기계 작업자 찾기 어려움",
+              problem: "이양, 방제, 수확 등 전문 장비가 필요한데 어디서 찾아야 할지 모름",
+              solution: "지역별 등록된 농기계 운용자와 보유 장비를 한눈에 확인",
             },
             {
-              title: "복잡한 절차 부담",
-              problem: "복잡한 앱 사용이 어려움",
-              solution: "5단계만으로 작업 등록 완료, 큰 글씨와 간단한 UI",
+              title: "장비 정보 불투명",
+              problem: "누가 어떤 장비를 가지고 있는지, 장비 상태는 어떤지 알 수 없음",
+              solution: "제조사, 모델, 연식, 사양까지 상세 정보 공개",
             },
             {
-              title: "스팸 전화 우려",
-              problem: "번호 공개 시 스팸 전화 걱정",
-              solution: "내가 선택한 작업자만 내 번호를 받음",
+              title: "작업 품질 불확실",
+              problem: "처음 의뢰하는 운용자의 실력과 경험을 알 수 없음",
+              solution: "평판 점수, 완료 작업 수, 실제 리뷰로 검증된 운용자 선택",
             },
             {
-              title: "높은 중개 수수료",
-              problem: "기존 플랫폼의 10-20% 수수료",
-              solution: "100% 무료, 영원히",
+              title: "장비 구입 비용 부담",
+              problem: "트랙터 1대 5,000만원 이상, 모든 장비를 구입하기 어려움",
+              solution: "필요한 작업만 전문가에게 의뢰하여 비용 절감",
             },
             {
-              title: "믿을 수 있는 작업자 선택",
-              problem: "어떤 작업자가 좋을지 모름",
-              solution: "작업자 정보, 통화 가능 시간, 메시지를 보고 선택",
+              title: "작업 후 품질 평가 어려움",
+              problem: "작업이 제대로 되었는지, 장비가 문제없었는지 확인 어려움",
+              solution: "작업 전후 사진, GPS 기록, 상호 평가 시스템",
             },
           ].map((item, idx) => (
             <div key={idx} className="card card-hover">
@@ -90,40 +98,42 @@ export default function ForFarmersPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {[
             {
-              icon: "⚡",
-              title: "빠른 등록",
+              icon: Shield,
+              title: "장비 정보 투명 공개",
               items: [
-                "3분 이내 작업 등록 완료",
-                "즉시 작업자들에게 노출",
-                "수정도 언제든지 가능",
+                "제조사, 모델명 확인",
+                "장비 연식 및 주요 사양",
+                "장비 사진 및 등록증",
               ],
             },
             {
-              icon: "🔒",
-              title: "안전한 개인정보 보호",
+              icon: Award,
+              title: "검증된 운용자",
               items: [
-                "내가 수락한 작업자만 내 번호 확인",
-                "동의 없이 번호 공개 절대 없음",
-                "개인정보보호법 완벽 준수",
+                "평판 점수 및 리뷰 확인",
+                "완료 작업 이력 투명 공개",
+                "자격증 및 교육 이력",
               ],
             },
             {
-              icon: "👥",
-              title: "선택권은 농부님께",
+              icon: Sparkles,
+              title: "선택권은 농가에게",
               items: [
-                "작업자들의 요청을 확인",
-                "마음에 드는 작업자만 선택",
-                "여러 작업자에게 동시 연락 가능",
+                "여러 운용자 제안 비교",
+                "장비와 가격 꼼꼼히 검토",
+                "마음에 드는 운용자 선택",
               ],
             },
             {
-              icon: "💰",
-              title: "100% 무료",
-              items: ["가입비 없음", "중개 수수료 없음", "숨겨진 비용 없음"],
+              icon: CheckCircle,
+              title: "작업 품질 보장",
+              items: ["작업 전후 사진 기록", "GPS 위치 확인", "상호 평가 시스템"],
             },
           ].map((benefit, idx) => (
             <div key={idx} className="card card-hover text-center">
-              <div className="text-5xl mb-4">{benefit.icon}</div>
+              <div className="w-14 h-14 bg-gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <benefit.icon className="w-7 h-7 text-white" />
+              </div>
               <h3 className="text-xl font-bold text-text mb-4">
                 {benefit.title}
               </h3>
@@ -140,35 +150,106 @@ export default function ForFarmersPage() {
         </div>
       </Section>
 
-      {/* Use Cases */}
+      {/* 작업 유형 섹션 */}
       <Section
         background="white"
+        title="의뢰 가능한 작업 유형"
+        subtitle="전문 농기계가 필요한 모든 작업"
+        centered
+      >
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {[
+            {
+              title: "경운/정지 작업",
+              equipment: "트랙터",
+              desc: "밭갈이, 땅 고르기 등 기본 작업",
+              example: "동양물산 TYM T2540 (55마력)",
+            },
+            {
+              title: "이양 작업",
+              equipment: "이양기",
+              desc: "벼 모내기 작업",
+              example: "동양물산 PF80 (8조 이양)",
+            },
+            {
+              title: "무인 방제 작업",
+              equipment: "드론",
+              desc: "농약, 비료 살포",
+              example: "DJI Agras T30 (30L 탱크)",
+            },
+            {
+              title: "수확 작업",
+              equipment: "콤바인",
+              desc: "벼, 보리 등 곡물 수확",
+              example: "동양물산 TCH-480 (4조)",
+            },
+            {
+              title: "운반 작업",
+              equipment: "트랙터",
+              desc: "수확물 운반, 자재 이동",
+              example: "LS Mtron XR50 (50마력)",
+            },
+            {
+              title: "기타 작업",
+              equipment: "다양한 농기계",
+              desc: "파종, 배토, 멀칭 등",
+              example: "작업에 맞는 전문 장비",
+            },
+          ].map((job, idx) => (
+            <div key={idx} className="card card-hover">
+              <h3 className="text-xl font-bold text-text mb-2">{job.title}</h3>
+              <p className="text-sm text-secondary-600 font-semibold mb-3">
+                필요 장비: {job.equipment}
+              </p>
+              <p className="text-text-light mb-3">{job.desc}</p>
+              <p className="text-xs text-text-light bg-gray-50 p-2 rounded">
+                예시: {job.example}
+              </p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Use Cases */}
+      <Section
+        background="gray"
         title="단감 활용 시나리오"
-        subtitle="이런 상황에 단감을 활용하세요"
+        subtitle="실제 농가의 사용 사례"
         centered
       >
         <div className="space-y-6 max-w-4xl mx-auto">
           {[
             {
-              title: "사과 수확 시즌 🍎",
+              title: "이천 벼농사 - 이양 작업",
+              equipment: "동양물산 PF80 이양기 (8조)",
               description:
-                "사과 수확 시즌에 긴급하게 5명의 인력이 필요했습니다. 단감에 작업을 등록한 후 하루 만에 12명의 작업자로부터 연락 요청을 받았고, 그 중 경험이 있고 가까운 거리에 사는 작업자 5명을 선택했습니다.",
+                "5ha 규모의 논에 이양 작업이 필요했습니다. 단감에서 8조 이양기를 보유한 운용자를 찾았고, 4.8점의 높은 평판과 156건의 완료 이력을 확인한 후 선택했습니다. 작업은 3일 만에 완료되었고, 정확한 간격과 깊이로 만족스러운 결과를 얻었습니다.",
             },
             {
-              title: "포도밭 전지 작업 🍇",
+              title: "나주 과수원 - 드론 방제",
+              equipment: "DJI Agras T30 무인방제기",
               description:
-                "포도밭 전지 작업에 2주간 도움이 필요했습니다. 단감에서 통화 가능 시간을 명확히 설정하니, 작업자들이 적절한 시간에만 연락 요청을 보내서 편리했습니다.",
+                "3.5ha 과수원 방제 작업에 드론을 활용하고 싶었습니다. DJI T30을 보유한 운용자를 발견했고, 드론 조종 자격증과 야간 작업 가능 여부를 확인했습니다. 정밀한 GPS 방제로 농약 사용량을 30% 절감할 수 있었습니다.",
             },
             {
-              title: "딸기 하우스 정리 🍓",
+              title: "논산 밭 - 트랙터 경운",
+              equipment: "대동 CK30 트랙터 (30마력)",
               description:
-                "딸기 하우스 정리에 단기 인력이 필요했습니다. 작은 일이라 부담스러웠는데, 단감은 수수료가 없어서 부담 없이 등록할 수 있었습니다.",
+                "2ha 규모의 밭을 경운해야 했습니다. 소형 트랙터로 충분한 작업이었고, 근처에 계신 운용자를 찾아 합리적인 가격에 의뢰했습니다. 작업 전후 사진으로 품질을 확인할 수 있어 안심되었습니다.",
             },
           ].map((useCase, idx) => (
             <div key={idx} className="card card-hover">
-              <h3 className="text-2xl font-bold text-text mb-3">
-                {useCase.title}
-              </h3>
+              <div className="flex items-start gap-3 mb-3">
+                <Shield className="w-6 h-6 text-primary-500 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold text-text mb-1">
+                    {useCase.title}
+                  </h3>
+                  <p className="text-sm text-secondary-600 font-semibold">
+                    사용 장비: {useCase.equipment}
+                  </p>
+                </div>
+              </div>
               <p className="text-lg text-text-light leading-relaxed">
                 {useCase.description}
               </p>
@@ -178,7 +259,7 @@ export default function ForFarmersPage() {
       </Section>
 
       {/* Features for Farmers */}
-      <Section background="gradient" title="농부를 위한 주요 기능" centered>
+      <Section background="white" title="농가를 위한 주요 기능" centered>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[
             {
@@ -217,11 +298,11 @@ export default function ForFarmersPage() {
       </Section>
 
       {/* CTA */}
-      <Section background="white">
+      <Section background="gradient">
         <div className="card bg-gradient-to-br from-primary-500 to-primary-700 text-white text-center max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">지금 바로 시작하세요</h2>
           <p className="text-xl mb-8 text-primary-50">
-            일손 구하기, 단감으로 간단하고 안전하게
+            전문 농기계 작업, 단감으로 간편하고 투명하게
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/how-it-works">

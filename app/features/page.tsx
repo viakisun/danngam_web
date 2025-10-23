@@ -11,87 +11,95 @@ import {
   TrendingUp,
   Sparkles,
   Users,
+  Wrench,
+  Database,
+  Award,
+  BarChart3,
+  FileCheck,
+  Zap,
+  Smartphone,
+  Lock,
 } from "lucide-react";
 
 export default function FeaturesPage() {
   const features = [
     {
-      icon: Phone,
-      title: "전화번호만으로 간편 가입",
+      icon: Wrench,
+      title: "장비 등록 및 관리",
       description:
-        "복잡한 절차 없이 전화번호 인증만으로 1분 내에 서비스를 시작할 수 있습니다. SMS 인증 코드 자동 발송, 본인인증 불필요.",
-      color: "primary",
-      badge: "필수",
-    },
-    {
-      icon: Users,
-      title: "농부: 3분 내 작업 등록",
-      description:
-        "작물, 기간, 급여, 위치 등 핵심 정보만으로 빠르게 구인 공고를 올릴 수 있습니다. 큰 글씨와 버튼으로 사용 편리.",
+        "보유 농기계 상세 정보 등록 (제조사, 모델, 연식, 사양, 사진, 인증서). 여러 대의 장비를 한 번에 관리할 수 있습니다.",
       color: "primary",
       badge: "핵심",
     },
     {
-      icon: MapPin,
-      title: "작업자: 위치 기반 실시간 작업 탐색",
+      icon: Award,
+      title: "평판 시스템",
       description:
-        "내 현재 위치 근처의 농업 작업 정보를 지도와 리스트로 실시간 확인합니다. 작물별 아이콘, 거리 표시, 자동 클러스터링.",
+        "5점 만점 평가, 작업 이력 기반 신뢰도 점수. 리뷰와 평점으로 운용자의 전문성을 입증하고, 농가는 검증된 운용자를 선택할 수 있습니다.",
       color: "secondary",
-      badge: "핵심",
+      badge: "신뢰",
+    },
+    {
+      icon: Database,
+      title: "작업 이력 자동 기록",
+      description:
+        "GPS 위치, 작업 시간, 면적, 사진 등 모든 작업 내역이 자동으로 저장됩니다. 투명한 이력 관리로 신뢰를 구축합니다.",
+      color: "primary",
+      badge: "투명성",
+    },
+    {
+      icon: BarChart3,
+      title: "데이터 대시보드",
+      description:
+        "장비 가동률, 수익, 작업 통계를 시각화하여 제공합니다. 운용자는 경영 현황을 한눈에 파악하고, 농가는 작업 내역을 확인할 수 있습니다.",
+      color: "secondary",
+      badge: "분석",
     },
     {
       icon: Shield,
-      title: "상호 동의 기반 연락처 교환",
+      title: "장비 인증 시스템",
       description:
-        "양측의 명시적인 동의 하에만 전화번호가 교환되어 개인정보를 보호하고 안전한 소통을 보장합니다. 동의 없이 절대 번호 공개 안 됨.",
+        "농기계 등록증, 보험 가입 증명서를 확인하여 안전한 작업 환경을 보장합니다. 검증된 장비만 플랫폼에 등록됩니다.",
       color: "primary",
       badge: "안전",
     },
     {
-      icon: Sparkles,
-      title: "완전 무료 서비스",
+      icon: MapPin,
+      title: "위치 기반 실시간 매칭",
       description:
-        "중개 수수료 없이 모든 기능을 무료로 이용할 수 있어 농부와 작업자 모두에게 경제적 부담이 없습니다. 영원히 무료.",
+        "농가는 근처의 농기계 운용자를 찾고, 운용자는 가까운 작업 공고를 확인할 수 있습니다. 지역별 필터링으로 효율적인 매칭이 가능합니다.",
       color: "secondary",
-      badge: "혜택",
-    },
-    {
-      icon: Clock,
-      title: "통화 가능 시간 사전 공유",
-      description:
-        "농부와 작업자 모두 통화 가능한 시간을 미리 설정하여 불필요한 연락을 방지하고 효율적인 소통을 돕습니다.",
-      color: "primary",
       badge: "편의",
     },
     {
       icon: CheckCircle,
-      title: "농부: 선택적 연락 수락",
+      title: "농가: 선택적 제안 수락",
       description:
-        "작업자들이 보낸 연락 요청을 확인하고, 마음에 드는 작업자에게만 연락처를 공개할 수 있습니다. 선택권은 농부에게.",
+        "여러 운용자의 제안을 비교하고, 장비 정보와 평판을 확인한 후 마음에 드는 운용자를 선택할 수 있습니다. 선택권은 농가에게 있습니다.",
       color: "primary",
       badge: "제어",
     },
     {
       icon: MessageCircle,
-      title: "작업자: 농부에게 한마디 메시지",
+      title: "운용자: 작업 제안 메시지",
       description:
-        "연락 요청 시 농부에게 자신을 어필할 수 있는 간단한 메시지를 함께 보낼 수 있습니다. 경험, 희망 사항 등 전달.",
+        "작업 공고에 제안할 때 보유 장비와 강점을 어필할 수 있는 메시지를 함께 보낼 수 있습니다. 자격증, 경험 등을 효과적으로 전달하세요.",
       color: "secondary",
       badge: "소통",
     },
     {
-      icon: AlertTriangle,
-      title: "신고 기능 및 자동 제재",
+      icon: FileCheck,
+      title: "작업 전후 사진 및 보고서",
       description:
-        "부적절한 작업이나 사용자를 신고할 수 있으며, 일정 횟수 이상 신고 시 자동 제재 시스템이 작동하여 안전한 환경을 유지합니다.",
+        "작업 시작 전과 완료 후 사진을 촬영하여 품질을 증명합니다. 농가는 작업 결과를 명확히 확인하고, 운용자는 실력을 입증할 수 있습니다.",
       color: "primary",
-      badge: "안전",
+      badge: "품질",
     },
     {
       icon: TrendingUp,
-      title: "내 연락 요청 현황 (작업자)",
+      title: "내 제안 현황 추적",
       description:
-        "내가 보낸 연락 요청의 상태(대기중, 수락됨, 만료됨)를 한눈에 확인하고 관리할 수 있습니다. 진행 상태 추적.",
+        "운용자는 보낸 제안의 상태(검토중, 수락됨, 거절됨)를 실시간으로 확인하고 관리할 수 있습니다. 효율적인 작업 수주 관리가 가능합니다.",
       color: "secondary",
       badge: "관리",
     },
@@ -99,7 +107,7 @@ export default function FeaturesPage() {
       icon: Bell,
       title: "실시간 푸시 알림",
       description:
-        "새로운 연락 요청, 연락처 교환 완료 등 중요한 정보를 실시간 푸시 알림으로 받아볼 수 있습니다. 5초 이내 즉시 전송.",
+        "새로운 작업 공고, 제안 수락, 평가 등록 등 중요한 알림을 실시간으로 받아볼 수 있습니다. 놓치지 않고 빠르게 대응하세요.",
       color: "primary",
       badge: "필수",
     },
@@ -114,7 +122,7 @@ export default function FeaturesPage() {
             <span className="gradient-text">단감의 핵심 기능</span>
           </h1>
           <p className="text-xl text-text-light max-w-3xl mx-auto">
-            농부와 작업자 모두에게 최적화된 11가지 주요 기능을 소개합니다
+            농가와 농기계 운용자 모두에게 최적화된 11가지 주요 기능을 소개합니다
           </p>
         </div>
       </section>
@@ -154,7 +162,9 @@ export default function FeaturesPage() {
       >
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           <div className="card text-center">
-            <div className="text-5xl mb-4">⚡</div>
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Zap className="w-8 h-8 text-white" />
+            </div>
             <h3 className="text-2xl font-bold text-text mb-3">빠른 성능</h3>
             <ul className="text-text-light space-y-2">
               <li>앱 초기 로딩 &lt; 3초</li>
@@ -164,7 +174,9 @@ export default function FeaturesPage() {
           </div>
 
           <div className="card text-center">
-            <div className="text-5xl mb-4">📱</div>
+            <div className="w-16 h-16 bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Smartphone className="w-8 h-8 text-white" />
+            </div>
             <h3 className="text-2xl font-bold text-text mb-3">오프라인 지원</h3>
             <ul className="text-text-light space-y-2">
               <li>캐시된 데이터 조회 가능</li>
@@ -174,7 +186,9 @@ export default function FeaturesPage() {
           </div>
 
           <div className="card text-center">
-            <div className="text-5xl mb-4">🔐</div>
+            <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mx-auto mb-4">
+              <Lock className="w-8 h-8 text-white" />
+            </div>
             <h3 className="text-2xl font-bold text-text mb-3">보안</h3>
             <ul className="text-text-light space-y-2">
               <li>Firebase 인증</li>
@@ -193,24 +207,24 @@ export default function FeaturesPage() {
               <Users className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-text mb-4">
-              농부를 위한 기능
+              농가를 위한 기능
             </h3>
             <ul className="space-y-3 text-text-light">
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                <span>3분 내 간단한 작업 등록</span>
+                <span>작업 공고 등록 및 관리</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                <span>연락 요청 관리 및 작업자 선택</span>
+                <span>운용자 제안 비교 및 선택</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                <span>선택적 연락 수락으로 개인정보 보호</span>
+                <span>장비 정보 및 평판 확인</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
-                <span>푸시 알림으로 즉시 확인</span>
+                <span>작업 완료 내역 및 평가</span>
               </li>
             </ul>
           </div>
@@ -220,24 +234,24 @@ export default function FeaturesPage() {
               <MapPin className="w-7 h-7 text-white" />
             </div>
             <h3 className="text-2xl font-bold text-text mb-4">
-              작업자를 위한 기능
+              운용자를 위한 기능
             </h3>
             <ul className="space-y-3 text-text-light">
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-secondary-500 flex-shrink-0 mt-0.5" />
-                <span>위치 기반 실시간 작업 탐색</span>
+                <span>보유 장비 등록 및 관리</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-secondary-500 flex-shrink-0 mt-0.5" />
-                <span>간편한 관심 표시 및 메시지 전달</span>
+                <span>작업 공고 탐색 및 제안</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-secondary-500 flex-shrink-0 mt-0.5" />
-                <span>내 연락 요청 현황 추적</span>
+                <span>작업 이력 및 평판 관리</span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle className="w-5 h-5 text-secondary-500 flex-shrink-0 mt-0.5" />
-                <span>알림으로 농부 연락 즉시 확인</span>
+                <span>수익 대시보드 및 통계</span>
               </li>
             </ul>
           </div>

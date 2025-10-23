@@ -113,9 +113,11 @@ export default function ContactPage() {
                 >
                   <option value="">선택해주세요</option>
                   <option value="general">일반 문의</option>
-                  <option value="technical">기술 지원</option>
-                  <option value="report">신고 관련</option>
-                  <option value="partnership">제휴 문의</option>
+                  <option value="farmer">농가 문의</option>
+                  <option value="operator">운용자 문의</option>
+                  <option value="institution">지원기관 문의</option>
+                  <option value="partnership">파트너십 문의</option>
+                  <option value="manufacturer">제조사 협력</option>
                   <option value="other">기타</option>
                 </select>
               </div>
